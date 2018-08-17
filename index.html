@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS REST Client</title>
+</head>
+
+<body>
+
+    <h1>Pagamentos</h1>
+
+    <div id="mensagemView"></div>
+
+    <div>
+        <button type="button" onclick="pagamentoController.atualizarPagamentos(event)">
+            Atualizar Pagamentos
+        </button>
+    </div>
+    <br>
+    <br>
+
+    <div id="pagamentosView"></div>
+
+    <script src="js/app/models/Pagamento.js"></script>
+    <script src="js/app/controllers/PagamentoController.js"></script>
+    <script src="js/app/helpers/DateHelper.js"></script>
+    <script src="js/app/models/ListaPagamentos.js"></script>
+    <script src="js/app/views/View.js"></script>
+    <script src="js/app/views/PagamentosView.js"></script>
+    <script src="js/app/models/Mensagem.js"></script>
+    <script src="js/app/views/MensagemView.js"></script>
+    <script>
+        let pagamentoController = new PagamentoController();
+
+        var URL_WEBSERVICE = "http://localhost:3000";
+    </script>
+</body>
+</html>
